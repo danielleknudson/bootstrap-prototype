@@ -1,0 +1,141 @@
+/* import the necessary Bootstrap files */
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+
+// Custom color variables
+// GRAYS
+$gray0: #F8F9FA;
+$gray1: #F1F3F5;
+$gray3: #DEE2E6;
+$gray4: #CED4DA;
+$gray6: #868E96;
+$gray7: #495057;
+$gray9: #212529;
+
+// PRIMARY COLORS
+$primary: #020E44;
+$primary2: #8F9CD5;
+$primary4: #5464AC;
+$primary6: #283882;
+$primary8: #0B1958;
+
+$accent: #00A5BD;
+$red: #D81F00;
+$orange: #DA6B24;
+$green: #2D7415;
+
+
+// Override default variables before the import
+$body-bg: $gray0;
+$body-color: $gray9;
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, sans-serif, "Segoe UI","Roboto", "Oxygen", "Ubuntu", "Helvetica Neue", Arial, sans-serif;
+
+// Create your own map
+$custom-colors: (
+  "gray0": $gray0,
+  "gray1": $gray1,
+  "gray3": $gray3,
+  "gray4": $gray4,
+  "gray6": $gray6,
+  "gray7": $gray7,
+  "gray9": $gray9,
+  "primary": $primary,
+  "primary2": $primary2,
+  "primary4": $primary4,
+  "primary6": $primary6,
+  "primary8": $primary8,
+  "accent": $accent,
+  "red": $red,
+  "orange": $orange,
+  "green": $green
+);
+
+// Merge the maps
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+$custom-spacers: (
+  '4': 4px,
+  '8': 8px,
+  '16': 16px,
+  '24': 24px,
+  '32': 32px,
+  '48': 48px,
+  '64': 64px
+);
+
+// Merge size maps
+$spacers: map-merge($spacers, $custom-spacers);
+
+$link-color:                              $primary6;
+$link-hover-color:                        $gray9;
+$link-hover-decoration:                   none;
+
+$font-weight-bold: 600;
+
+$nav-link-padding-y: 8px;
+$nav-link-padding-x: 8px;
+
+$navbar-dark-toggler-border-color: $white;
+$navbar-light-toggler-border-color: $gray9;
+$navbar-dark-color: $white;
+$navbar-light-color: $gray9;
+$navbar-dark-toggler-icon-bg:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='#{$navbar-dark-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+$navbar-light-toggler-icon-bg:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='#{$navbar-light-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+
+.sidebar.bg-primary {
+  background-color: $primary6;
+  color: $white;
+
+  > * {
+    color: $white;
+  }
+
+  .nav-item {
+    &:hover, &:active {
+      border-radius: 2px;
+      background-color: $primary6;
+    }
+    
+    &:last-child {
+      margin-bottom: 16px;
+    }
+
+    .nav-link {
+      color: $white;
+
+      &:hover, &:active, &:visited {
+        color: $white;
+      }
+
+      &:active {
+        font-weight: $font-weight-bold;
+      }
+    }
+  }
+}
+
+.sidebar.bg-light {
+  background-color: $gray3;
+  
+  .nav-item {
+    &:last-child {
+      margin-bottom: 16px;
+    }
+
+    .nav-link {
+      color: $gray9;
+    }
+
+    &:hover, &:active {
+      font-weight: $font-weight-bold;
+    }
+  
+    &:active {
+      color: $gray9;
+    }
+  }
+}
+
+// Import Bootstrap and its default variables
+@import '~bootstrap/scss/bootstrap.scss';

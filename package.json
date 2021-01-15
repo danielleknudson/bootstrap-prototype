@@ -10,9 +10,15 @@
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.53",
     "@types/react-dom": "^16.9.8",
+    "bootstrap": "^4.5.3",
+    "node-sass": "4.14.1",
     "react": "^17.0.1",
+    "react-bootstrap": "^1.4.3",
     "react-dom": "^17.0.1",
+    "react-router-bootstrap": "^0.25.0",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
+    "styled-components": "^5.2.1",
     "typescript": "^4.0.3",
     "web-vitals": "^0.2.4"
   },
@@ -20,7 +26,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public",
+    "format": "prettier --check **/*.{ts,tsx,json,md} --config .prettierrc.js --write"
   },
   "eslintConfig": {
     "extends": [
@@ -39,5 +48,20 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^6.1.14",
+    "@storybook/addon-backgrounds": "^6.1.14",
+    "@storybook/addon-essentials": "^6.1.14",
+    "@storybook/addon-links": "^6.1.14",
+    "@storybook/node-logger": "^6.1.14",
+    "@storybook/preset-create-react-app": "^3.1.5",
+    "@storybook/react": "^6.1.14",
+    "@types/bootstrap": "^5.0.3",
+    "@types/react-router-bootstrap": "^0.24.5",
+    "@types/react-router-dom": "^5.1.7",
+    "@types/styled-components": "^5.1.7",
+    "storybook-addon-jsx": "^7.3.4",
+    "storybook-react-router": "^1.0.8"
   }
 }

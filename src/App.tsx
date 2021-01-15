@@ -1,26 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import logo from './logo.svg'
+import './App.css'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { LinkContainer } from 'react-router-bootstrap'
+import Navbar from 'react-bootstrap/Navbar'
+import Nav from 'react-bootstrap/Nav'
+import NavItem from 'react-bootstrap/NavItem'
+import NavLink from 'react-bootstrap/NavLink'
+import NavbarBrand from 'react-bootstrap/NavbarBrand'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+import { groupBy } from './helpers'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default function App() {
+    return <Container fluid>This is Pathpoint's design system</Container>
 }
-
-export default App;
